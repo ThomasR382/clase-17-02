@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class Metodos {
-
+    
+    Metodos mt = new Metodos();
     Scanner sc = new Scanner(System.in);
 
     public objcomida [][] Llenarmatriz(objcomida[][] m)
@@ -11,9 +12,16 @@ public class Metodos {
             for (int j = 0; j < m.length; j++) {
                 objcomida o = new objcomida();
                 System.out.println("Ingrese tipo de comida");
-                o.setTipo(sc.next());
+                System.out.println("1) Perro");
+                System.out.println("2) Perra");
+                System.out.println("3) Salchipapa");
+                System.out.println("4) Hamburguesa");
+                o.setTipo(mt.validarnumero(sc));
                 System.out.println("Ingrese tamaño");
-                o.setTamaño(sc.next());
+                System.out.println("1) Pequeño");
+                System.out.println("2) Mediano");
+                System.out.println("3) Grande");
+                o.setTamaño(mt.validarnumero(sc));
                 System.out.println("Ingrese el Precio");
                 o.setPrecio(sc.nextDouble());
                 System.out.println("Ingrese cantidad");
@@ -27,6 +35,15 @@ public class Metodos {
             }
         }
         return m;
+    }
+    
+    public int validarnumero(Scanner sc)
+    {
+        while(!sc.hasNextInt()){
+            System.out.println("Ingrese un numero valido");
+        }
+        return sc.nextInt();
+
     }
 
     public void mostrarmatriz(objcomida[][]m){
