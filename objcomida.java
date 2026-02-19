@@ -1,23 +1,33 @@
-public class objcomida{
-    private String Tipo;
-    private String Tamaño;
+public class objcomida {
+    private int Tipo;
+    private int Tamaño;
     private Double Precio;
     private int Cantidad;
     private String Descrip;
+    private int Pedido;
+    private int Estado;
 
-    public String getTipo() {
+    public int getTipo() {
         return Tipo;
     }
 
-    public void setTipo(String Tipo) {
+    public int getPedido() {
+        return Pedido;
+    }
+
+    public void setPedido(int pedido) {
+        Pedido = pedido;
+    }
+
+    public void setTipo(int Tipo) {
         this.Tipo = Tipo;
     }
 
-    public String getTamaño() {
+    public int getTamaño() {
         return Tamaño;
     }
 
-    public void setTamaño(String Tamaño) {
+    public void setTamaño(int Tamaño) {
         this.Tamaño = Tamaño;
     }
 
@@ -44,6 +54,13 @@ public class objcomida{
     public void setDescrip(String Descrip) {
         this.Descrip = Descrip;
     }
-    
-    
+
+    public int getEstado() {
+        return Estado;
+    }
+
+    public void setEstado(int estado) {
+        Estado = estado;
+    }
+
 }

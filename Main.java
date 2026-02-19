@@ -7,10 +7,10 @@ public class Main {
         System.out.println("Ingrese la dimension de la matriz que va a realizar");
         n = sc.nextInt();
         Metodos mt = new Metodos();
-        objcomida [][] m = new objcomida[n][n];
+        objcomida[][] m = new objcomida[n][n];
         m = mt.Llenarmatriz(m);
-        mt.mostrarmatriz(m); 
+        mt.mostrarmatriz(m);
 
     }
-    
+
 }
